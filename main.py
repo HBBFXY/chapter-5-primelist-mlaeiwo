@@ -12,6 +12,5 @@ def PrimeList(N):
         if is_prime:
             primes.append(str(num))
     return " ".join(primes)
-
 n = int(input())
 print(PrimeList(n))
