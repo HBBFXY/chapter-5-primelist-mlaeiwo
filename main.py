@@ -1,9 +1,18 @@
-# 在此文件中实现 PrimeList 函数
-
 def PrimeList(N):
-    """
-    返回小于 N 的所有质数，以空格分隔    
-    参数:    N - 正整数    
-    返回:    str - 包含所有小于 N 的质数的字符串，空格分隔
-    """
-    
+    # 存储小于N的质数
+    primes = []
+    # 遍历2到N-1的每个数，判断是否为质数
+    for num in range(2, N):
+        is_prime = True
+        # 试除：从2到num的平方根，若能被整除则不是质数
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        # 如果是质数，加入列表
+        if is_prime:
+            primes.append(str(num))
+    # 用空格连接质数，返回结果
+    return " ".join(primes)
+# 测试函数，以N=10为例
+print(PrimeList(10))
