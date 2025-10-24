@@ -9,3 +9,7 @@ def PrimeList(N):
         if is_prime:
             primes.append(str(num))
     return " ".join(primes)
+
+# 从标准输入读取N并输出结果
+n = int(input())
+print(PrimeList(n))
