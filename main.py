@@ -1,5 +1,8 @@
 def PrimeList(N):
     primes = []
+    # 当N≤2时，直接返回空列表
+    if N <= 2:
+        return ""
     for num in range(2, N):
         is_prime = True
         for i in range(2, int(num ** 0.5) + 1):
@@ -10,6 +13,5 @@ def PrimeList(N):
             primes.append(str(num))
     return " ".join(primes)
 
-# 从标准输入读取N并输出结果
 n = int(input())
 print(PrimeList(n))
