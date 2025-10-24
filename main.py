@@ -9,4 +9,4 @@ def PrimeList(N):
         if is_prime:
             primes.append(str(num))
     return " ".join(primes)
-print(PrimeList(10))
+print(PrimeList())
